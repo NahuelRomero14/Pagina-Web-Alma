@@ -1,0 +1,241 @@
+/*------------------------------------------ PRINCIPAL ------------------------------------------------*/
+* { 
+    margin: 0;
+}
+
+html,body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(243, 174, 174);
+}
+
+header {
+    display: block;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    background-color:  #F2CCC9;
+    padding: 7px;
+}
+
+nav a:visited, nav a:link {
+
+    color:black;
+    text-decoration: none;
+}
+nav > ul {
+    display: inline;
+    padding: 0;
+    
+}
+
+nav > ul > li{
+
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px 0 5px;
+}
+
+main{
+    display: block;
+    background-image: url(Images/fondoSalmonMorado.png);
+    padding-top: 3em;
+    padding-bottom: 3em;
+    min-height: 85%;
+}
+
+footer{
+    text-align: center;
+    padding: 1.5em;
+    background-color: #F2CCC9;
+}
+
+aside{
+    padding: 2em;
+    text-align: center;
+    max-width: 15%;
+}
+article{
+    padding: 2em;
+    
+}
+article{
+    width: 75%;
+}
+
+#bannerAlma{
+    
+    width: 80%;
+    border-radius: 6% / 10%;
+    border: solid #F2CCC9 0.2em;
+}
+.banners {
+    text-align: center;
+}
+
+#logoAlma{
+    max-width: 90%;
+    max-height: 90%;
+
+}
+
+@media only screen and (min-width : 768px){
+    main{
+        display: flex;
+        
+    }
+    aside{
+        margin-left: 2%;
+    }
+}
+h1 {
+    font-size: 2em;
+    margin-top: .5em;
+}
+.subtitle {
+    background-color: #F2CCC9;
+    font-size: 0.8em;
+    padding: 1em;
+    border: solid #534573 0.2em;
+    margin-top: 0.5em;
+}
+.contacto{
+    background-color: #F2CCC9;
+    margin: 0% 20% 0% 0%;
+    border-radius: 5em;
+}
+
+/*------------------------------------------ CONTACT ------------------------------------------------*/
+
+.textoContacto {
+    text-align: center;
+    margin-bottom: 0.4em;
+}
+#logoWhatsapp {
+    padding: 2em;
+    max-width: 15%;
+    max-height: 15%;
+}
+#logoInstagram {
+    padding: 2em;
+    max-width: 9%;
+    max-height: 9%;
+}
+#logoFacebook {
+    padding: 2em;
+    max-width: 9%;
+    max-height: 9%;
+    margin-left: 2%;
+}
+#logoGmail {
+    padding: 2em;
+    max-width: 10%;
+    max-height: 10%;
+}
+.logosRedesSociales {
+    margin-top: 4em;
+    text-align: center;
+}
+
+/*------------------------------------------ CATALOGO ------------------------------------------------*/
+
+.columns-desktop {
+    
+    display:flex;   
+    max-width: 100%;
+    max-height: 100%;
+}
+
+ 
+.element{
+    padding: 1em;
+    margin: 1em;
+    background-color: #58498C;
+    width: 25%;
+    color: white;
+
+    
+    
+}
+.imagenCatalogo {
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+}
+.elementInformation  {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+
+}
+.elementInformation .title {
+    font-weight: bold;
+    
+
+}
+.elementInformation .price {
+    text-align: right;
+    font-weight: bold;
+    margin-bottom: 0.4em;
+
+}
+.element button {
+    background-color: #F2CCC9;
+    padding: 1.5em;
+    border-radius: 0.5em;
+    margin-top: 0.4em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*------------------------------------------ ORDER ------------------------------------------------*/
+.order-Selected{
+    padding: 1em;
+    margin: 1em 0 0 0;
+    height: 50%;
+    background-color: #58498C;
+    width: 25%;
+    color: white;
+    max-width: 100%;
+    max-height: 100%;
+    
+   
+         
+}
+.principalOrder {
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    /*margin-left: 2em;*/
+}
+.formulario{
+    margin-left: 10em;
+    background-color: #F2CCC9;
+    border-radius: 0.5em;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 1em;
+}
+p2{
+    background-color: rgb(99, 71, 255);
+    display: flex;
+    margin: 1em 2em 1em 2em;
+    height: 100%;
+    width: 40%;
+    border-radius: 0.5em;
+    padding: 1em;
+    
+}
+
+.botonesOrder {
+    padding:0.5em;
+    text-align: center;
+ 
+}
+
+

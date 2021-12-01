@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alma</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+
+<body>
+ <header>
+     <nav>
+         <ul>
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catalogo</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+         </ul>
+     </nav>
+ </header>
+ <main>
+    <aside>
+        <img src="Images/AlmaLogo.png" alt="Alma" id="logoAlma">
+    </aside>
+    <article>
+
+      <h1>Orden</h1>
+      <div class="principalOrder">
+        <div class="order-Selected">
+        
+          <img class="imagenCatalogo" src="" alt="imagen-catalogo">
+          <div class="elementInformation">
+              
+              <div class="title">
+              </div>
+
+              <div class="price">
+              </div>
+
+          </div>
+        
+        
+        </div>
+
+        <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="POST" class="formulario">
+         <div class="input-group">
+
+            <div>
+              <label for="Nombre" >Nombre *</label>
+            </div>
+            <div>
+             <input type="text" name="nombre" id="nombre1" required>
+            </div>
+
+           <div>
+              <label for="Apellido">Apellido *</label>
+           </div>
+           <div>
+             <input type="text" name="apellido" id="apellido1"required>
+           </div>
+
+           <div>
+            <label for="Direción">Direción *</label>
+           </div>
+           <div>
+            <input type="text" name="dirección" id="dirección1"required>
+           </div>
+
+
+           <div>
+            <label for="Provincia">Provincia *</label>
+           </div>
+           <div>
+            <input type="text" name="provincia" id="provincia1"required>
+           </div>
+
+           <div>
+            <label for="Pais">Pais *</label>
+          </div>
+          <div>
+           <input type="text" name="pais" id="pais1"required>
+          </div>
+
+         <div>
+            <label for="Departamento / Piso">Departamento / Piso</label>
+         </div>
+         <div>
+           <input type="text" name="depto/piso" id="depto/piso1">
+         </div>
+
+         <div>
+          <label for="Mail">Mail *</label>
+         </div>
+         <div>
+          <input type="email" name="mail" id="mail1"required>
+         </div>
+
+
+         <div>
+          <label for="Telefono">Teléfono *</label>
+         </div>
+         <div>
+          <input type="number" name="telefono" id="telefono1"required>
+         </div>
+
+         
+         <div>
+          <label for="Servicio">Servicio Solicitado *</label>
+         </div>
+         <div>
+          <input type="text" name="Servicio Solicitado" id="servicio1"required>
+         </div>
+
+
+
+
+          </div>
+          <div class="botonesOrder">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Order">
+            	
+            <input type="button" value="Página anterior" onClick="history.go(-1);">
+          </div>
+          
+        </form>
+        
+        <p2>
+          Los items destacados con "*" son de caracter obligatorio.
+        </p2>
+
+      </div>
+
+    </article>
+ </main>
+ <footer>
+     <nav >
+         <ul>
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catalogo</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+         </ul>
+     </nav>
+ </footer>
+</body>
+<script>
+  window.addEventListener( "DOMContentLoaded", () => {
+    const order = localStorage.getItem("order");
+    if(order){
+      const catalogOrder = JSON.parse(order);
+      const orderSelected = document.querySelector(".order-Selected");
+      orderSelected.querySelector(".title").innerText = catalogOrder.title;
+      orderSelected.querySelector(".price").innerText = catalogOrder.price;
+      const img = orderSelected.querySelector("img");
+      img.setAttribute("src",`Images/${catalogOrder.id}.jpg`);
+    }
+  });
+</script>
+
+</html>
